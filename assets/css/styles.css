@@ -1,0 +1,1200 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: url("kep/index.jpg");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+} 
+
+/* OLDAL TESTE */
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/index.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.content {
+    padding: 15em 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    top: 30%;
+    bottom: 50%;
+}
+
+.content h1 {
+    font-size: 80px;
+    margin-bottom: 0;
+}
+
+#container input {
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: inherit;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+#container button {
+    padding: 10px 30px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: inherit;
+    transition: background-color 1s ease-out 100ms
+}
+
+#container button:hover {
+    color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+/* HIREK A FŐOLDALON TESTE */
+
+#hirek_main {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+.hirek_content {
+    padding: 7em 20em;
+    text-align: center;
+}
+.hirek_content button {
+    margin-top: 25px;
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+.hirek_content button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+/* HIREK A HIREK OLDALON */
+
+#ffhirek {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/news.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#hirlevel_urlapja {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hirlevel_urlapja a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hirlevel {
+    width: 20%;
+    padding: 15px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+#hirlevel_urlapja input[type=submit] {
+    text-transform: uppercase;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#hirlevel_urlapja input[type=submit]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+#hirlevel_urlapja input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+#hirlevel_urlapja input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+#hirlevel_urlapja input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#hirlevel_urlapja input {
+    font-family:inherit;
+}
+
+#hirlevel_urlapja i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: white;
+}
+
+#hirlevel_urlapja p {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#hirlevel_urlapja label {
+    font-weight: bold;
+}
+
+/* RENDELÉS A FŐOLDALON TESTE */
+
+
+#rendeles_main {
+    height: 500px;
+    background-image: url("../img/animals.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.rendeles_content {
+    color: white;
+    padding: 7em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+.rendeles_content button {
+    color: black;
+    background-color: white;
+    opacity: .6;
+    padding: 10px 80px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+.rendeles_content button:hover {
+    border: 1px solid black;
+    opacity: .6;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+/* RENDELESEK OLDAL TESTE */
+
+.restaurants {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurant-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.restaurant-image {
+    position: relative;
+} 
+
+.restaurant-image img {
+    display: block;
+}
+
+.restaurant-image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 250ms;
+}
+
+.restaurant-image:hover::after {
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.restaurant-image:hover .restaurant-title {
+    opacity: 1;
+}
+
+.restaurant-title {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 250ms;
+    color: white;
+    z-index: 1;
+}
+
+.delivery-info {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.restaurants p {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+.image {
+    position: relative;
+    width: 200px;
+    margin-right: 30px;
+}
+.image__img {
+    display: block;
+    width: 100%;
+}
+.image__img1 {
+    height: 199px;
+    width: 100%;
+    display: block;
+}
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+.image__overlay:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.image__overlay:hover > *{
+    transform: translateY(0);
+}
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.image__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+
+.image__overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image__overlay--blur1 {
+    backdrop-filter: blur(5px);
+}
+.image__overlay1:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.image__overlay1:hover > *{
+    transform: translateY(0);
+}
+.image__overlay1 > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+
+/* HAMBURGEREK OLDAL TESTE */
+
+#hamburgereink {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/paw.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#hamburgereink span {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 5em 0;
+}
+
+
+
+/* ÉTEL TERMÉKEINK TESTE */
+
+#termek_ajanlatok {
+
+}
+.termekek {
+    margin: 1em auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.food_1{
+    margin: .2em .7em;
+
+}
+.image_food {
+    height: 150px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.image_food_overlay {
+    text-align: center;
+}
+.food_title {
+    font-weight: bold;
+}
+.food_description {
+    font-size: 13px;
+}
+.food_price {
+    font-weight: bold;
+    font-size: 15px;
+}
+.food_button {
+    margin-top: 15px;
+}
+.food_button button {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: bold;
+    transition: background-color 1s ease-out 100ms
+}
+.food_button button:hover {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+
+/* MENÜK OLDAL TESTE */
+
+
+#menuink {
+    width: 100%;
+    height: 650px;
+    background-image: url("../img/dsadasd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#menuink span {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 3em 3em;
+}
+
+/* SALÁTÁK OLDAL TESTE */
+
+#salataink {
+    width: 100%;
+    height: 650px;
+    background-image: url("../img/salads.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#salataink span {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 3em 2em;
+}
+
+/* ÜDITŐK OLDAL TESTE */
+
+#uditoink {
+    width: 100%;
+    height: 650px;
+    background-image: url("../img/drinks.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#uditoink span {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 3em 3em;
+}
+
+
+/*PIZZÁK OLDAL TESTE */
+
+#pizzaink {
+    width: 100%;
+    height: 650px;
+    background-image: url("../img/about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#pizzaink span {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 2em 3em;
+}
+
+
+/* KAPCSOLAT A FŐOLDALON TESTE */
+
+#kapcsolat_main {
+    height: 500px;
+    background-image: url("../img/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.kapcsolat_content {
+    color: white;
+    padding: 7em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+#kapcsolat_main button {
+    color: black;
+    background-color: white;
+    opacity: .6;
+    padding: 10px 80px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+#kapcsolat_main button:hover {
+    border: 1px solid black;
+    opacity: .6;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+
+/* KAPCSOLAT OLDAL TESTE */
+
+#contact_bg {
+    width: 100%;
+    height: 500px;
+    background-image: url("../img/contact-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.contact_bg_content span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    padding: 5em 0em;
+    letter-spacing: .2em;
+}
+
+
+/* KAPCSOLAT URLAP TESTE */
+
+#kapcsolaturpal form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#kapcsolaturpal label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#kapcsolaturpal input, select, textarea {
+    width: 100% !important;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#kapcsolaturpal input[type=submit] {
+    text-transform: uppercase;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#kapcsolaturpal input[type=submit]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+#kapcsolaturpal input, textarea, select {
+    font-family:inherit;
+}
+
+
+/* ROLUNK A FŐOLDALON TESTE */
+
+#rolunk_main {
+    height: 500px;
+}
+.rolunk_content {
+    color: black;
+    padding: 7em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ff {
+    font-size: 20px;
+    font-weight: bold;
+}
+.rolunk_content button {
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+.rolunk_content button:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+
+
+
+/* RÓLUNK OLDAL TESTE */
+
+#ff_rolunk {
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.ff_rolunk_content span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    padding: 8em 5em;
+    letter-spacing: .2em;
+}
+
+#rolunk_szoveg_main {
+    width: 80%;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+}
+.rolunk_szoveg {
+    text-align: center;
+}
+
+.rolunk_szoveg h1 {
+    font-size: 25px;
+}
+
+
+
+
+
+/* MEKI RENDELES URLAP TESTE */
+
+#mekiRendeles_uralp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#mekiRendeles_uralp .container {
+    width: 50%;
+}
+
+#mekiRendeles_uralp input[type=text], select, textarea, input[type=number], input[type=email] {
+    width: 25%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+
+/* RENDELÉS LEADÁSA OLDAL */
+
+#rendelesleadas {
+    height: 100vh;
+    margin-top: 100px;
+}
+
+#rendelesleadas form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#rendelesleadas label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#rendelesleadas input, select, textarea {
+    width: 100% !important;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#rendelesleadas input[type=submit] {
+    text-transform: uppercase;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#rendelesleadas input[type=submit]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+#rendelesleadas input, textarea, select {
+    font-family:inherit;
+}
+
+
+
+/* ADMIN FELÜLET */
+
+#products {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#products td {
+    width: 200px;
+    text-align: center;
+}
+
+#products img {
+    width: 100px;
+    height: 100px;
+}
+
+#products button[type=submit], button[type=reset] {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#products button[type=submit]:hover, button[type=reset]:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+
+
+/* ÚJ TERMÉK */
+
+
+#adding-new_product {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#adding-new_product form {
+    width: 40%;
+}
+
+#adding-new_product span {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#adding-new_product input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+#adding-new_product label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#adding-new_product button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#adding-new_product button:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+
+
+
+
+
+.allcard{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background: white;
+}
+
+.card1{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    border-radius:10px ;
+    border: 1px solid lightgray;
+    width: 20%;
+    height: 50vh;
+    padding: 10px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+
+.card2:hover{
+    cursor: pointer;
+    transition: 0.6s;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 45px;
+}
+
+.card2 img{
+    width: 60%;
+    height: 20vh;
+}
+
+.span1{
+    font-size: 13px;
+}
+
+.card2 .infoButton{
+    color: black;
+    border: 1px solid lightgray;
+    background: white;
+    margin-top: 25px;
+    transition: background-color 0.5s ease-out 100ms;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.card2 .infoButton:hover{
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out 100ms;
+    border-radius: 10px;
+}
+
+.card2 button {
+    background-color: white;
+    border: none;
+}
+
+.card2 button:hover {
+    cursor: pointer;
+}
+
+#searcher {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#searcher button {
+    background: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 0.5s ease-out 100ms;
+}
+
+#searcher button:hover {
+    background-color: #000;
+    cursor: pointer;
+    border: 1px solid #000;
+    color: white;
+    transition: background-color 0.5s ease-out 100ms;
+}
+
+.search-container form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container input[type=text] {
+    padding: 10px 10px;
+    width: 250px;
+    border-radius: 5px;
+    z-index: 0;
+    border: 1px solid #000;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-content{
+    width: 50%;
+    height: 40%;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#close1{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+#close1:hover {
+    color: red;
+}
+
+.leftSide {
+    height: 80%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.rightSide {
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rightSide span {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.modalTitle {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modalButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalButtons .adoptButton {
+    color: black;
+    border: 1px solid lightgray;
+    background: white;
+    margin-top: 25px;
+    transition: background-color 0.5s ease-out 100ms;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.modalButtons .adoptButton:hover {
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out 100ms;
+    border-radius: 10px;
+}
+
+.heart {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
