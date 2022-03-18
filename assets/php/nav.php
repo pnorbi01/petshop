@@ -46,8 +46,8 @@
                 <b></b>
                 <b></b>
                 <a href="#">
-                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                    <span class="title">Kijelentkezés</span>
+                    <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+                    <span class="title">Kedvencek</span>
                 </a>
             </li>
         </ul>
