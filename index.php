@@ -7,10 +7,6 @@ require_once('config/db.php');
     <div class="content">
         <h1>5Shop.</h1>
         <small>Ahol a kiskedvencek gazdára találnak.</small>
-        <!-- <form method="post" action="search.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search" style="font-size: 15px"></i></button>
-        </form> -->
     </div>
 </div>
 <div id="searcher">
