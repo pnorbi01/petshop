@@ -33,22 +33,6 @@
             <li class="list">
                 <b></b>
                 <b></b>
-                <a href="index.php">
-                    <span class="icon"><ion-icon name="search-outline"></ion-icon></span>
-                    <span class="title">Keresés</span>
-                </a>
-            </li>
-            <li class="list">
-                <b></b>
-                <b></b>
-                <a href="index.php">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <span class="title">Profil</span>
-                </a>
-            </li>
-            <li class="list">
-                <b></b>
-                <b></b>
                 <a href="news.php">
                     <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
                     <span class="title">Hírek</span>
@@ -65,9 +49,9 @@
             <li class="list">
                 <b></b>
                 <b></b>
-                <a href="restaurants.php">
-                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                    <span class="title">Beállitások</span>
+                <a href="animals.php">
+                    <span class="icon"><ion-icon name="paw-outline"></ion-icon></span>
+                    <span class="title">Kiskedvencek</span>
                 </a>
             </li>
             <li class="list">
@@ -76,14 +60,6 @@
                 <a href="#">
                     <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                     <span class="title">Kijelentkezés</span>
-                </a>
-            </li>
-            <li class="list">
-                <b></b>
-                <b></b>
-                <a href="admin/admin.php">
-                    <span class="icon"><ion-icon name="finger-print-outline"></ion-icon></span>
-                    <span class="title">Admin</span>
                 </a>
             </li>
         </ul>

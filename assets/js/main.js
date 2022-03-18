@@ -2,7 +2,7 @@ document.getElementById('button').addEventListener('click', function() {
     document.querySelector('.bg-modal').style.display = 'flex';
 })
 
-document.getElementById('close1').addEventListener('click', function() {
+document.getElementById('close').addEventListener('click', function() {
     document.querySelector('.bg-modal').style.display = 'none';
 })
 
