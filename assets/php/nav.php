@@ -39,7 +39,7 @@
                 <b></b>
                 <a href="animals.php">
                     <span class="icon"><ion-icon name="paw-outline"></ion-icon></span>
-                    <span class="title">Kiskedvencek</span>
+                    <span class="title">Állataink</span>
                 </a>
             </li>
             <li class="list">
