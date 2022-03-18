@@ -23,7 +23,7 @@ require_once('config/db.php');
         <h1>HÍREK</h1>
         <span>Íratkozz fel hírlevelünkre, hogy az elsők közt legyél, akik értesülnek
             legújabb akcióinkról és híreinkről. Az alábbi gombon keresztül feliratkozhatsz. <br><b>NE
-                HABOZ!</b></span><br>
+                HABOZZ!</b></span><br>
         <a href="news.php"><button>FELIRATKOZÁS</button></a>
     </div>
 </div>
