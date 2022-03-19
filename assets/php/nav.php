@@ -45,6 +45,14 @@
             <li class="list">
                 <b></b>
                 <b></b>
+                <a href="register.php">
+                    <span class="icon"><ion-icon name="log-in-outline"></ion-icon></span>
+                    <span class="title">Bejelentkezés</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
                 <a href="#">
                     <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
                     <span class="title">Kedvencek</span>

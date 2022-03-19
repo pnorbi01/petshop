@@ -3,10 +3,10 @@
         <div class="left">
             <ul>
                 <li class="title">Social Media</li>
-                <li><a href="http://www.facebook.com">Facebook</a></li>
-                <li><a href="http://www.instagram.com">Instagram</a></li>
-                <li><a href="http://www.twitter.com">Twitter</a></li>
-                <li> <a href="http://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://facebook.com" class="fa fa-facebook"></a></li>
+                <li><a href="https://instagram.com" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com" class="fa fa-twitter"></a></li>
+                <li><a href="https://linkedin.com" class="fa fa-linkedin"></a></li>
             </ul>
             <ul>
                 <li class="title">5Shop</li>
@@ -46,6 +46,7 @@ footer li {
 footer a {
     color: black;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .upper-footer {
@@ -81,6 +82,10 @@ footer li a:hover {
 .copyright ul {
     display: flex;
     gap: .5em;
+}
+
+.left .fa {
+    font-size: 20px;
 }
 
 .arrow-up:hover {

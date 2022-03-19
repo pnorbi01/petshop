@@ -840,7 +840,226 @@ body {
     padding: 5em 0;
 }
 
+    /* Login page */
 
+    #sign-in {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/sign-in-bg.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    #sign-in-form {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sign-in-main {
+        width: 20%;
+        padding: 15px;
+        background-color: rgba(204, 204, 204, .60);
+        border-radius: 5px;
+    }
+    
+    #sign-in-form a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #sign-in-form input[type=submit] {
+        text-transform: uppercase;
+        width: 100%;
+        color: black;
+        background-color: white;
+        padding: 10px 80px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        transition: background-color 1s ease-out 100ms
+    }
+    
+    #sign-in-form input[type=submit]:hover {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        transition: background-color 1s ease-out 100ms
+    }
+    
+    #sign-in-form input[type=email] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    #sign-in-form input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    #sign-in-form input[type=password] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    #sign-in-form input {
+        font-family:inherit;
+    }
+    
+    #sign-in-form i {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 3em;
+        color: white;
+    }
+    
+    #sign-in-form p {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    #sign-in-form label {
+        font-weight: bold;
+    }
+    
+    
+    /* Sign up page */
+    
+    #sign-up {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/sign-in-bg.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    #sign-up-form {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #sign-up-form a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sign-up-main {
+        width: 20%;
+        padding: 15px;
+        background-color: rgba(204, 204, 204, .60);
+        border-radius: 5px;
+    }
+    
+    #sign-up-form input[type=submit] {
+        text-transform: uppercase;
+        width: 100%;
+        color: black;
+        background-color: white;
+        padding: 10px 80px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        transition: background-color 1s ease-out 100ms
+    }
+    
+    #sign-up-form input[type=submit]:hover {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        transition: background-color 1s ease-out 100ms
+    }
+    
+    #sign-up-form input[type=email] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    #sign-up-form input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    #sign-up-form input[type=password] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    #sign-up-form input {
+        font-family:inherit;
+    }
+    
+    #sign-up-form i {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 3em;
+        color: white;
+    }
+    
+    #sign-up-form p {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    #sign-up-form label {
+        font-weight: bold;
+    }
 
 
 
