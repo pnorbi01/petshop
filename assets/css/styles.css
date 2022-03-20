@@ -1061,7 +1061,54 @@ body {
         font-weight: bold;
     }
 
+    /* Adopting page /form/ */
 
+#adopt form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#adopt label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#adopt input, select, textarea {
+    width: 100% !important;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#adopt input[type=submit] {
+    text-transform: uppercase;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#adopt input[type=submit]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+#adopt input, textarea, select {
+    font-family:inherit;
+}
 
 
 
@@ -1247,62 +1294,6 @@ body {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-}
-
-
-
-/* RENDELÉS LEADÁSA OLDAL
-
-#rendelesleadas {
-    height: 100vh;
-    margin-top: 100px;
-}
-
-#rendelesleadas form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 600px;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-#rendelesleadas label {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-#rendelesleadas input, select, textarea {
-    width: 100% !important;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-}
-
-#rendelesleadas input[type=submit] {
-    text-transform: uppercase;
-    width: 100%;
-    color: black;
-    background-color: white;
-    padding: 10px 80px;
-    border: 1px solid #ccc;
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
-    transition: background-color 1s ease-out 100ms
-}
-
-#rendelesleadas input[type=submit]:hover {
-    color: white;
-    background-color: black;
-    cursor: pointer;
-    transition: background-color 1s ease-out 100ms
-}
-
-#rendelesleadas input, textarea, select {
-    font-family:inherit;
 }
 
 

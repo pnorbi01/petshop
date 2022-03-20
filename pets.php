@@ -28,6 +28,7 @@ $row = $result->fetch_assoc();
             <button id="button" type="button" class="infoButton">Részletek</button>
             <button onclick="Toggle1()" id="heartButton"><i class="fas fa-heart" style="font-size: 20px"></i></button>
         </div>
+        
 
         <div class="bg-modal">
             <div class="modal-content">
@@ -42,7 +43,7 @@ $row = $result->fetch_assoc();
                     <span class="modalTitle">Ár</span>
                     <span><?= $row["price"] ?> EUR</span>
                     <div class="modalButton">
-                        <button type="submit" value="Submit" class="adoptButton">Örökbefogadás</button>
+                    <a href="adopt.php?animalId=<?= $animalId ?>&petId=<?= $row["id"] ?>"><button type="submit" value="Submit" class="adoptButton">Örökbefogadás</button></a>
                     </div>
                 </div>
                 <div id="close">+</div>
