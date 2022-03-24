@@ -610,12 +610,13 @@ body {
 .card-content {
     display: flex;
     flex-direction: column;
-    border-radius:10px ;
+    border-radius: 30px;
     border: 1px solid lightgray;
     width: 20%;
     height: 50vh;
     padding: 10px;
-    background: white;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
     transition: 0.6s;
@@ -624,8 +625,12 @@ body {
 .card-content:hover {
     cursor: pointer;
     transition: 0.6s;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 45px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.05); 
 }
+
 
 .card-content img {
     width: 60%;
@@ -661,7 +666,7 @@ body {
 }
 
 .card-content button {
-    background-color: white;
+    background-color: #f1f1f1;
     border: none;
 }
 
