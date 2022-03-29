@@ -32,6 +32,7 @@ require_once('assets/php/nav.php');
         <input type="submit" value="Elküld">
     </form>
 </div>
+
 <?php
 require_once('assets/php/footer.php');
 ?>

@@ -19,7 +19,7 @@ require_once('assets/php/nav.php');
 
                 <label for="secondPassword">JELSZÓ ISMÉT</label>
                 <input type="password" id="secondPassword" name="secondPassword" required placeholder="Jelszó ismét..">
-
+                
                 <input type="submit" value="Regisztráció">
             </form>
         </div>

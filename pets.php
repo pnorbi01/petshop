@@ -21,8 +21,7 @@ $row = $result->fetch_assoc();
 			while($row = $result->fetch_assoc()) {
 				?>
         <div class="card-content">
-            <img src="assets/img/<?= $row["image"] ?>" alt="animal" width="150px" height="150px" />
-            <hr style="width:80%; color: black; margin: 0 auto; margin-top: 30px"><br>
+            <img src="assets/img/<?= $row["image"] ?>" alt="animal" width="150px" height="150px" /><br>
             <span style="font-size: 23px"><b><?= $row["name"] ?></b></span>
             <span class="pet-description"><?= $row["description"] ?></span>
             <button id="button" type="button" class="infoButton">Részletek</button>

@@ -2,38 +2,33 @@
     <div class="upper-footer">
         <div class="left">
             <ul>
-                <li class="title">Social Media</li>
-                <li><a href="https://facebook.com" class="fa fa-facebook"></a></li>
-                <li><a href="https://instagram.com" class="fa fa-instagram"></a></li>
-                <li><a href="https://twitter.com" class="fa fa-twitter"></a></li>
-                <li><a href="https://linkedin.com" class="fa fa-linkedin"></a></li>
+                <li class="title">Közösségi felületeink</li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://linkedin.com">LinkedIn</a></li>
             </ul>
             <ul>
-                <li class="title">5Shop</li>
-                <li><a href="about.php">Rólunk</a></li>
-                <li><a href="contact.php">Kapcsolat</a></li>
-                <li><a href="news.php">Hírek</a></li>
+                <li class="title">Petshop</li>
+                <li><a href="animals.php">Fedezd fel kiskedvenceinket</a></li>
             </ul>
-        </div>
-        <div class="right">
-            <a href="#top">
-                <i style="font-size:24px" class="fa arrow-up">&#xf077;</i>
-            </a>
+            <ul>
+                <li class="title">Tudnivalók a Petshop-ról</li>
+                <li><a href="contact.php">Kapcsolatfelvétel a Petshop-al</a></li>
+                <li><a href="news.php">Feliratkozás a hírlevélre</a></li>
+                <li><a href="about.php">Tudj meg többet rólunk</a></li>
+            </ul>
         </div>
     </div>
     <div class="copyright">
-        <span><i style="font-size:15px" class="fa">&#xf1f9;</i> 2022 5Shop. Minden jog fenntartva.</span>
-        <ul>
-            <li><i style="font-size:24px" class="fa">&#xf1f1;</i></li>
-            <li><i style="font-size:24px" class="fa">&#xf1f4;</i></li>
-            <li><i style="font-size:24px" class="fa">&#xf1f0;</i></li>
-        </ul>
+        <span>Copyright <i style="font-size:15px" class="fa">&#xf1f9;</i> 2022 Petshop. Minden jog fenntartva.</span>
     </div>
 </footer>
 <style>
 footer {
-    border-top: 1px solid black;
+    color: #6e6e73;
     padding: 1em;
+    background-color: #f5f5f7;
 }
 
 footer ul,
@@ -44,15 +39,15 @@ footer li {
 }
 
 footer a {
-    color: black;
+    color: #6e6e73;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .upper-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: left;
+    margin-bottom: 50px;
 }
 
 .upper-footer .left {
@@ -62,6 +57,7 @@ footer a {
 }
 
 .upper-footer li.title {
+    color: #1d1d1f;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -79,63 +75,4 @@ footer li a:hover {
     gap: 1em;
 }
 
-.copyright ul {
-    display: flex;
-    gap: .5em;
-}
-
-.left .fa {
-    font-size: 20px;
-}
-
-.arrow-up:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
 </style>

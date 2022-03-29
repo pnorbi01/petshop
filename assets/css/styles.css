@@ -67,16 +67,54 @@ body {
     transition: background-color 1s ease-out 100ms
 }
 
+.index-title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.hr-tag {
+    width: 90%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    border: 0;
+    height: 1px;
+}
+
+#news-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
 #news-main {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-radius: 20px;
     height: 500px;
-    background-color: white;
+    background-color: #fbfbfd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 2s;
 }
+
+#news-main:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.05); 
+}
+
 .news-content {
-    padding: 7em 20em;
+    width: 50%;
     text-align: center;
 }
+
+.news-content h1 {
+    font-size: 40px;
+}
+
 .news-content button {
     margin-top: 25px;
     color: black;
@@ -96,60 +134,104 @@ body {
     transition: background-color 1s ease-out 100ms
 }
 
+#pet-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 #pet-main {
-    height: 500px;
+    border-radius: 20px;
+    width: 70%;
+    height: 600px;
     background-image: url("../img/animals.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-}
-
-.pet-content {
-    color: white;
-    padding: 7em 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 2s;
+}
+
+#pet-main:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.05); 
+}
+
+.pet-content {
+    color: white;
+    padding: 0 5em;
     text-align: right;
 }
+
 .pet-content button {
     color: black;
     background-color: white;
-    opacity: .6;
     padding: 10px 80px;
     border-radius: 5px;
     border: 1px solid white;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
-    transition: background-color 1s ease-out 100ms
+    transition: background-color 1s ease-out 100ms;
+    margin-top: 15px;
 }
 
 .pet-content button:hover {
     border: 1px solid black;
-    opacity: .6;
     color: white;
     background-color: black;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
 
+
+#about-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 #about-main {
     height: 500px;
-}
-.about-content {
-    color: black;
-    padding: 7em 5em;
+    background-color: #fbfbfd;
+    width: 70%;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 2s;
 }
+
+#about-main:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.05); 
+}
+
+.about-content {
+    color: black;
+    padding: 0 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .petshop-logo {
     font-size: 20px;
     font-weight: bold;
 }
+
 .about-content button {
     color: black;
     background-color: white;
@@ -169,26 +251,48 @@ body {
     transition: background-color 1s ease-out 100ms
 }
 
+#contact-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 #contact-main {
-    height: 500px;
+    height: 600px;
+    width: 70%;
+    border-radius: 20px;
     background-image: url("../img/contact.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 2s;
 }
+
+#contact-main:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.05); 
+}
+
 .contact-content {
     color: white;
-    padding: 7em 5em;
+    padding: 0 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 }
+
 #contact-main button {
     color: black;
     background-color: white;
-    opacity: .6;
     padding: 10px 80px;
     border-radius: 5px;
     border: 1px solid white;
@@ -196,9 +300,9 @@ body {
     font-family: 'Oswald', sans-serif;
     transition: background-color 1s ease-out 100ms
 }
+
 #contact-main button:hover {
     border: 1px solid black;
-    opacity: .6;
     color: white;
     background-color: black;
     cursor: pointer;
@@ -590,13 +694,11 @@ body {
     /* Design of card */
 
 .card {
-    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    background: white;
 }
 
 .card-container {
@@ -605,6 +707,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 .card-content {
@@ -676,7 +779,16 @@ body {
 
     /* Design of searcher */
 
+#searcher-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 #searcher {
+    width: 50%;
+    border-radius: 20px;
     height: 250px;
     display: flex;
     flex-direction: row;
@@ -685,7 +797,7 @@ body {
 }
 
 #searcher button {
-    background: white;
+    background: #fff;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 10px 20px;
@@ -733,7 +845,7 @@ body {
 
 .modal-content {
     width: 50%;
-    height: 40%;
+    height: 50%;
     background-color: white;
     border-radius: 4px;
     text-align: center;
@@ -765,16 +877,21 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid black;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) 1 100%;
+    margin-right: 15px;
+    border-left: hidden;
 }
 
 .rightSide {
-    height: 80%;
+    height: 65%;
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: left;
 }
 
 .rightSide span {
@@ -967,7 +1084,7 @@ body {
         background-position: center;
         background-attachment: fixed;
     }
-    
+
     #sign-up-form {
         height: 100vh;
         display: flex;
@@ -1115,9 +1232,25 @@ body {
     font-family:inherit;
 }
 
+    /* Go to the top button */
 
-
-
+#myBtn {
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    opacity: 70%;
+    transition: 1s ease-out 100ms;
+    transform: scale(0);
+}
 
 /* ÉTEL TERMÉKEINK TESTE 
 

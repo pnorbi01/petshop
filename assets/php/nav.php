@@ -5,6 +5,28 @@
     });
 </script>
 
+<button onclick="topFunction()" id="myBtn" title="Vissza az elejére"><i style="font-size:24px" class="fa arrow-up">&#xf077;</i></button>
+
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.transform = "scale(1)";
+  } else {
+    mybutton.style.transform = "scale(0)";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
 <div class="loader">
     <img src="assets/img/downloading.gif">
 </div>
@@ -228,6 +250,7 @@
 
 .toggle.active {
     background: #ff4d89;
+    transition: 0.4s;
 }
 
 .toggle ion-icon {
