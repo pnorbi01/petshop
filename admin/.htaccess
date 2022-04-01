@@ -1,4 +1,0 @@
-AuthName "Protected Area"
-AuthType Basic
-AuthUserFile C:/xampp/secret/.htpasswd
-require valid-user
