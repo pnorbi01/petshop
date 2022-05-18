@@ -9,7 +9,7 @@ define("SECRET", "gfhUi34xVbds23Qgk");
 $actions = ['login', 'register', 'forget'];
 
 $messages = [
-    0 => 'Közvetlen hozzáférés letagadva!',
+    0 => 'Közvetlen hozzáférés megtagadva!',
     1 => 'Nem létezik a felhasználó!',
     2 => 'Felhasználónév foglalt!',
     3 => 'Sikeres regisztáció, aktiválja fiókját!',

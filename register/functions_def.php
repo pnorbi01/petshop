@@ -90,8 +90,6 @@ function registerUser($username, $password, $firstname, $lastname, $email, $toke
     $sql = "INSERT INTO users_web (username,password,firstname,lastname,email,token,registration_expires,active)
              VALUES ('$username','$passwordHashed','$firstname','$lastname','$email','$token',DATE_ADD(now(),INTERVAL 1 DAY),0)";
 
-    // http://dev.mysql.com/doc/refman/5.6/en/date-and-time-functions.html
-
     $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
     return mysqli_insert_id($connection);
@@ -111,20 +109,15 @@ function createCode($length)
     $i = 0;
     $code = "";
 
-    /*    
-      48-57  = 0 - 9
-      65-90  = A - Z
-      97-122 = a - z        
-    */
 
-    $div = mt_rand(3, 9); // 3
+    $div = mt_rand(3, 9);
 
     while ($i < $length) {
         if ($i % $div == 0)
             $character = strtoupper(chr(mt_rand($down, $up)));
         else
-            $character = chr(mt_rand($down, $up)); // mt_rand(97,122) chr(98)
-        $code .= $character; // $code = $code.$character; //
+            $character = chr(mt_rand($down, $up));
+        $code .= $character;
         $i++;
     }
     return $code;
@@ -141,35 +134,18 @@ function createCode($length)
 function sendData($username, $email, $token)
 {
 
-    $header = "From: WEBMASTER <webmaster@vts.su.ac.rs>\n";
-    $header .= "X-Sender: webmaster@vts.su.ac.rs\n";
+    $header = "From: PetAdopt <petadopt@petadopt.rs>\n";
+    $header .= "X-Sender: petadopt@petadopt.rs\n";
     $header .= "X-Mailer: PHP/" . phpversion();
     $header .= "X-Priority: 1\n";
-    $header .= "Reply-To:support@vts.su.ac.rs\r\n";
+    $header .= "Reply-To:support@petadopt.rs\r\n";
     $header .= "Content-Type: text/html; charset=UTF-8\n";
 
     $message = "Data:\n\n user: $username \n \n www.vts.su.ac.rs";
     $message .= "\n\n to activate your account click on the link: " . SITE . "register/active.php?token=$token";
     $to = $email;
-    $subject = "Registration at VTS";
+    $subject = "Registration at PetAdopt";
     return mail($to, $subject, $message, $header);
-    //mail($to,$subject,$message);
-
-    /*
-    
-    1 is urgent, 3 is normal
-
-    https://github.com/Synchro/PHPMailer
-    https://monirulalom.medium.com/test-send-emails-in-php-with-xampp-and-mailhog-ce3e47e1abc2
-
-    [mail function]
-    ; For Win32 only.
-    SMTP = smtp.secureserver.net
-
-    ; For win32 only
-        sendmail_from = webmaster@domen.com
-
-    */
 }
 
 /**
