@@ -35,7 +35,6 @@ function topFunction() {
 <nav>
     <ul>
     <li><a href="index.php">Kezdőlap</a></li>
-        <!-- <li><a href="news.php">Hírek</a></li> -->
         <li><a href="contact.php">Kapcsolat</a></li>
         <li><a href="animals.php">Kiskedvencek</a></li>
         <li><a href="about.php">Rólunk</a></li>

@@ -29,18 +29,6 @@ if (!isset($_SESSION['username']) OR !isset($_SESSION['id_user']) OR !is_int($_S
         </div>
     </div>
 </div>
-<!-- <hr class="hr-tag"> -->
-<!-- <div id="news-bg">
-    <div id="news-main">
-        <div class="news-content">
-            <h1>HÍREK</h1>
-            <span>Íratkozz fel hírlevelünkre, hogy az elsők közt legyél, akik értesülnek
-                legújabb akcióinkról és híreinkről. Az alábbi gombon keresztül feliratkozhatsz. <br><b>NE
-                    HABOZZ!</b></span><br>
-            <a href="news.php"><button>FELIRATKOZÁS</button></a>
-        </div>
-    </div>
-</div> -->
 <div id="pet-bg">
     <div id="pet-main">
         <div class="pet-content">
