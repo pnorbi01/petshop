@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once('assets/php/header.php');
 require_once('assets/php/nav.php');
 require_once('config/db.php');
@@ -9,47 +10,51 @@ $sql = "SELECT * FROM species where id = ".$specieId;
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
-<div id="pet-background">
-    <span><?= $row["name"] ?></span>
-</div>
 <div class="card">
     <div class="card-container">
         <?php
-		$sql = "SELECT pets.id, pets.name, pets.description, pets.image, pets.price from pets, species, pet_specie where species.id = ".$specieId." and pet_specie.specie_id = species.id and pets.id = pet_specie.pet_id";
+		$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age from pets, species where pets.specieId = ".$specieId." and species.id = pets.specieId";
 		$result = $conn->query($sql);
+        $index = 0;
 		if($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {
 				?>
         <div class="card-content">
             <img src="assets/img/<?= $row["image"] ?>" alt="animal" width="150px" height="150px" /><br>
             <span style="font-size: 23px"><b><?= $row["name"] ?></b></span>
+            <span class="pet-specie"><?= $row["specie"] ?></span>
             <span class="pet-description"><?= $row["description"] ?></span>
-            <button id="button" type="button" class="infoButton">Részletek</button>
-            <button onclick="Toggle1()" id="heartButton"><i class="fas fa-heart" style="font-size: 20px"></i></button>
+            <button type="button" onclick="openModal(<?= $row['id'] ?>)" class="infoButton">Részletek</button>
+            <button onclick="toggleHeart(event)"><i class="fas fa-heart" style="font-size: 20px"></i></button>
         </div>
         
 
-        <div class="bg-modal">
+        <div class="bg-modal <?= "bg-modal-".$row['id'] ?>">
             <div class="modal-content">
                 <div class="leftSide">
                     <img src="assets/img/<?= $row["image"] ?>" alt="animal" width="50%" height="70%" />
                 </div>
                 <div class="rightSide">
                     <span class="modalTitle">Fajta</span>
+                    <span><?= $row["specie"] ?></span>
+                    <span class="modalTitle">Név</span>
                     <span><?= $row["name"] ?></span>
+                    <span class="modalTitle">Nem</span>
+                    <span><?= $row["gender"] ?></span>
+                    <span class="modalTitle">Kor</span>
+                    <span><?= $row["age"] ?></span>
                     <span class="modalTitle">Leírás</span>
                     <span><?= $row["description"] ?></span>
-                    <span class="modalTitle">Ár</span>
-                    <span><?= $row["price"] ?> EUR</span>
                     <div class="modalButton">
-                    <a href="adopt.php?animalId=<?= $animalId ?>&petId=<?= $row["id"] ?>"><button type="submit" value="Submit" class="adoptButton">Örökbefogadás</button></a>
+                        <a href="adopt.php?animalId=<?= $animalId ?>&petId=<?= $row["id"] ?>"><button type="submit" value="Submit" class="adoptButton">Örökbefogadás</button></a>
                     </div>
                 </div>
-                <div id="close">+</div>
+                <div class="close1" onclick="closeModal(event)">+</div>
             </div>
         </div>
         <script src="assets/js/main.js"></script>
         <?php
+        $index++;
             }
         }
     ?>

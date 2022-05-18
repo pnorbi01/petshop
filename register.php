@@ -8,18 +8,31 @@ require_once('assets/php/nav.php');
             <i class="fa">&#xf2b5;</i>
             <p>Hogyha már rendelkezel fiókkal kattintson a <a href="login.php">Bejelentkezés</a> gombra.</p>
             <form method="post" id="signup">
-                <label for="userName">FELHASZNÁLÓNÉV</label>
-                <input type="text" id="userName" name="userName" required placeholder="Felhasználónév..">
+                <div style="display: flex; gap: 1em;">
+                    <div style="width: 50%">
+                        <label for="userName">FELHASZNÁLÓNÉV</label>
+                        <input type="text" id="userName" name="userName" required placeholder="Felhasználónév..">
 
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" class="mainInput" required placeholder="example@gmail.com">
+                        <label for="fName">KERESZTNÉV</label>
+                        <input type="text" id="fName" name="fName" required placeholder="Keresztnév..">
 
-                <label for="firstPassword">JELSZÓ</label>
-                <input type="password" id="firstPassword" name="firstPassword" required placeholder="Jelszó..">
+                        <label for="lName">VEZETÉKNÉV</label>
+                        <input type="text" id="lName" name="lName" required placeholder="Vezetéknév..">
 
-                <label for="secondPassword">JELSZÓ ISMÉT</label>
-                <input type="password" id="secondPassword" name="secondPassword" required placeholder="Jelszó ismét..">
-                
+                        <input type="checkbox" id="subToNewspaper" name="subToNewspaper" value="subToNewspaper">
+                        <label for="subToNewspaper">Íratkoztasson fel a hírlevélre.</label>
+                    </div>
+                    <div style="width: 50%">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" class="mainInput" required placeholder="example@gmail.com">
+
+                        <label for="firstPassword">JELSZÓ</label>
+                        <input type="password" id="firstPassword" name="firstPassword" required placeholder="Jelszó..">
+
+                        <label for="secondPassword">JELSZÓ ISMÉT</label>
+                        <input type="password" id="secondPassword" name="secondPassword" required placeholder="Jelszó ismét..">
+                    </div>
+                </div>
                 <input type="submit" value="Regisztráció">
             </form>
         </div>

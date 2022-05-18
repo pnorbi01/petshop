@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once('assets/php/header.php');
 require_once('assets/php/nav.php');
 require_once('config/db.php');
@@ -8,7 +9,7 @@ $animalId = $_GET["animalId"];
     <p>Válassz a kategóriáink közül</p>
     <div class="animal-container">
         <?php
-		$sql = "SELECT species.id, species.name, species.image FROM animals, species, animal_specie WHERE animals.id = ".$animalId." AND animals.id = animal_specie.animal_id AND species.id = animal_specie.specie_id";
+		$sql = "SELECT * FROM species WHERE animalId = ".$animalId;
 		$result = $conn->query($sql);
 		if($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {

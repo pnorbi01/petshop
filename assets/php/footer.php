@@ -9,19 +9,19 @@
                 <li><a href="https://linkedin.com">LinkedIn</a></li>
             </ul>
             <ul>
-                <li class="title">Petshop</li>
+                <li class="title">Petadopt</li>
                 <li><a href="animals.php">Fedezd fel kiskedvenceinket</a></li>
             </ul>
             <ul>
-                <li class="title">Tudnivalók a Petshop-ról</li>
-                <li><a href="contact.php">Kapcsolatfelvétel a Petshop-al</a></li>
+                <li class="title">Tudnivalók a Petadopt-ról</li>
+                <li><a href="contact.php">Kapcsolatfelvétel a Petadopt-al</a></li>
                 <li><a href="news.php">Feliratkozás a hírlevélre</a></li>
                 <li><a href="about.php">Tudj meg többet rólunk</a></li>
             </ul>
         </div>
     </div>
     <div class="copyright">
-        <span>Copyright <i style="font-size:15px" class="fa">&#xf1f9;</i> 2022 Petshop. Minden jog fenntartva.</span>
+        <span>Copyright <i style="font-size:15px" class="fa">&#xf1f9;</i> 2022 Petadopt. Minden jog fenntartva.</span>
     </div>
 </footer>
 <style>

@@ -1,18 +1,19 @@
-document.getElementById('button').addEventListener('click', function() {
+/*document.getElementById('button').addEventListener('click', function() {
     document.querySelector('.bg-modal').style.display = 'flex';
-})
+})*/
 
-document.getElementById('close').addEventListener('click', function() {
-    document.querySelector('.bg-modal').style.display = 'none';
-})
+function openModal(id) {
+    document.querySelector('.bg-modal-' + id).style.display = 'flex';
+}
 
+function closeModal(event) {
+    event.target.parentElement.parentElement.style.display = "none";
+}
 
-var btnvar1 = document.getElementById('heartButton');
-
-function Toggle1() {
-    if (btnvar1.style.color == "red") {
-        btnvar1.style.color = "grey"
+function toggleHeart(event) {
+    if (event.target.parentElement.style.color == "red") {
+        event.target.parentElement.style.color = "black"
     } else {
-        btnvar1.style.color = "red"
+        event.target.parentElement.style.color = "red"
     }
 }
