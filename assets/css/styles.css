@@ -1221,13 +1221,17 @@ body {
 
     .closeAlert {
         margin-left: 15px;
-        color: white;
+        color: #f1f1f1;
         font-weight: bold;
         float: right;
         font-size: 30px;
         line-height: 20px;
         cursor: pointer;
         transition: 0.3s;
+    }
+
+    .closeAlert:hover {
+        color: #000;
     }
 
     /* Adopting page /form/ */
@@ -1302,6 +1306,134 @@ body {
     transition: 1s ease-out 100ms;
     transform: scale(0);
 }
+
+
+/* PROFIL SZERKESZTÉSE OLDAL */
+
+
+.edit-profile-title {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(3, 85, 192);
+}
+
+#edit-profile-container {
+    margin-top: 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#edit {
+    width: 50%;
+}
+
+#edit-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-form a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-main-main {
+    width: 50%;
+    padding: 15px;
+    background-color: rgba(204, 204, 204, .60);
+    border-radius: 15px;
+}
+
+#edit-form input[type=submit] {
+    text-transform: uppercase;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 1s ease-out 100ms
+}
+
+#edit-form input[type=submit]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease-out 100ms
+}
+
+#edit-form input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+#edit-form input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+#edit-form input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#edit-form input {
+    font-family:inherit;
+}
+
+#edit-form i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: rgb(3, 85, 192);
+}
+
+#edit-form p {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#edit-form label {
+    font-weight: bold;
+}
+
+
+
+
+
 
 /* ÉTEL TERMÉKEINK TESTE 
 
