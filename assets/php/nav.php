@@ -27,6 +27,13 @@ function topFunction() {
 
 </script>
 
+<div id="social-media-logos">
+    <a href="https://facebook.com" class="fa fa-facebook" title="Facebook"></a>
+    <a href="https://twitter.com" class="fa fa-twitter" title="Twitter"></a>
+    <a href="https://linkedin.com" class="fa fa-linkedin" title="LinkedIn"></a>
+    <a href="https://youtube.com" class="fa fa-youtube" title="Youtube"></a>
+    <a href="https://instagram.com" class="fa fa-instagram" title="Instagram"></a>
+</div>
 
 <div class="loader">
     <img src="assets/img/downloading.gif">
@@ -121,5 +128,57 @@ nav a:hover {
     }
 
 } 
+
+#social-media-logos {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 35%;
+    left: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s ease-out 100ms;
+    transform: scale(1);
+}
+
+#social-media-logos .fa {
+    padding: 15px;
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: #fff;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: #fff;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: #fff;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: #fff;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: #fff;
+  }
+
 
 </style>

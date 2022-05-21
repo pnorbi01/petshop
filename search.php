@@ -23,7 +23,7 @@ if(isset($_POST["search"]) && !empty($_POST["search"])) {
             <span class="pet-description"><?= $row["description"] ?></span>
             <button type="button" onclick="openModal(<?= $row['id'] ?>)" class="infoButton">Részletek</button>
             <button onclick="toggleHeart(event)"><i class="fas fa-heart" style="font-size: 20px"></i></button>
-        </div> 
+        </div>
 
         <div class="bg-modal <?= "bg-modal-".$row['id'] ?>">
             <div class="modal-content">
@@ -31,7 +31,7 @@ if(isset($_POST["search"]) && !empty($_POST["search"])) {
                     <img src="assets/img/<?= $row["image"] ?>" alt="animal" width="50%" height="70%" />
                 </div>
                 <div class="rightSide">
-                <span class="modalTitle">Fajta</span>
+                    <span class="modalTitle">Fajta</span>
                     <span><?= $row["specie"] ?></span>
                     <span class="modalTitle">Név</span>
                     <span><?= $row["name"] ?></span>
@@ -42,7 +42,8 @@ if(isset($_POST["search"]) && !empty($_POST["search"])) {
                     <span class="modalTitle">Leírás</span>
                     <span><?= $row["description"] ?></span>
                     <div class="modalButton">
-                        <a href="adopt.php?animalId=<?= $row["animalId"] ?>&petId=<?= $row["id"] ?>"><button type="submit" value="Submit" class="adoptButton">Örökbefogadás</button></a>
+                        <a href="adopt.php?animalId=<?= $row["animalId"] ?>&petId=<?= $row["id"] ?>"><button
+                                type="submit" value="Submit" class="adoptButton">Örökbefogadás</button></a>
                     </div>
                 </div>
                 <div class="close1" onclick="closeModal(event)">+</div>
@@ -50,7 +51,6 @@ if(isset($_POST["search"]) && !empty($_POST["search"])) {
         </div>
 
         <script src="assets/js/main.js"></script>
-
         <?php
 }
 }
