@@ -151,31 +151,31 @@ nav a:hover {
     text-decoration: none;
   }
   
-  .fa:hover {
+  #social-media-logos .fa:hover {
       opacity: 0.7;
   }
   
-  .fa-facebook {
+  #social-media-logos .fa-facebook {
     background: #3B5998;
     color: #fff;
   }
   
-  .fa-twitter {
+  #social-media-logos .fa-twitter {
     background: #55ACEE;
     color: #fff;
   }
   
-  .fa-linkedin {
+  #social-media-logos .fa-linkedin {
     background: #007bb5;
     color: #fff;
   }
   
-  .fa-youtube {
+  #social-media-logos .fa-youtube {
     background: #bb0000;
     color: #fff;
   }
   
-  .fa-instagram {
+  #social-media-logos .fa-instagram {
     background: #125688;
     color: #fff;
   }
