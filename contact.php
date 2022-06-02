@@ -1,15 +1,22 @@
 <?php 
 session_start();
+require_once('config/db.php');
 require_once('assets/php/header.php');
 require_once('assets/php/nav.php');
 ?>
+
+<?php 
+$sql = "select * from contact_question";
+$restaurants = $conn->query($sql);
+?>
+
 <div id="contact">
     <div class="contact-title">
         <span>Lépj velünk kapcsolatba</span>
     </div>
 </div>
 <div id="contact-form">
-    <form method="post" id="contactId">
+    <form method="post" id="contactId" action="contact-action.php">
         <label for="fname">Keresztneve</label>
         <input type="text" id="fname" name="firstname" required placeholder="Keresztneve..">
 
@@ -22,15 +29,29 @@ require_once('assets/php/nav.php');
         <label for="question">Kérdés</label>
         <select id="question" name="question">
             <option selected disabled>Miben segíthetünk?</option>
-            <option value="Hová tűnt a megrendelésem?">Mi a legjobb a kiskedvencem számára?</option>
-            <option value="Tudom módosítani/törölni a megrendelésem?">Tudom módosítani/törölni a lefoglalásomat?
-            </option>
+            <?php
+                while($row = $restaurants->fetch_assoc()) {
+                ?>
+            <option value="<?= $row["question_id"] ?>"><?= $row["question"] ?></option>
+            <?php
+                }
+            ?>
         </select>
 
         <label for="message">Üzenet</label>
         <textarea id="message" name="message" required placeholder="Irja le üzenetét.."></textarea>
 
-        <input type="submit" value="Elküld">
+        <input type="submit" value="Elküld" name="sb">
+        <?php
+        if(isset($_SESSION["contact-msg"]) && $_SESSION["contact-msg"] == "succ"){
+            echo '<div class="alertContact"><span>Sikeresen rögzítettük kérdésed!</span></div>';
+            unset($_SESSION["contact-msg"]);
+        }
+        else if(isset($_SESSION["contact-msg"]) && $_SESSION["contact-msg"] == "err") {
+            echo '<div class="alertContactErr"><span>Valami hiba történt. Próbálja újra!</span></div>';
+            unset($_SESSION["contact-msg"]);
+        }
+        ?>
     </form>
 </div>
 

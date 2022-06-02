@@ -6,7 +6,7 @@ require_once('config/db.php');
 
 if(isset($_POST["search"]) && !empty($_POST["search"])) {
     $search = "%".$_POST["search"]."%";
-    $sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age, animals.id as animalId FROM pets, species, animals where (species.name like '$search' and species.id = pets.specieId and animals.id = species.animalId) or (pets.name like '$search' and pets.specieId = species.id and animals.id = species.animalId)";
+    $sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age, pets.action, animals.id as animalId FROM pets, species, animals where (species.name like '$search' and species.id = pets.specieId and animals.id = species.animalId) or (pets.name like '$search' and pets.specieId = species.id and animals.id = species.animalId)";
     $result = $conn->query($sql);
 
     ?>
@@ -21,8 +21,20 @@ if(isset($_POST["search"]) && !empty($_POST["search"])) {
             <span style="font-size: 23px"><b><?= $row["name"] ?></b></span>
             <span class="pet-specie"><?= $row["specie"] ?></span>
             <span class="pet-description"><?= $row["description"] ?></span>
+            <?php
+            if($row["action"] == 1) {
+            ?>
             <button type="button" onclick="openModal(<?= $row['id'] ?>)" class="infoButton">Részletek</button>
             <button onclick="toggleHeart(event)"><i class="fas fa-heart" style="font-size: 20px"></i></button>
+            <?php
+            }
+            else {
+                ?>
+                <button type="button" class="infoButtonDis" disabled>Részletek</button>
+                <span class="adopted">ÖRÖKBEFOGADVA!</span>
+            <?php  
+            }
+            ?>
         </div>
 
         <div class="bg-modal <?= "bg-modal-".$row['id'] ?>">

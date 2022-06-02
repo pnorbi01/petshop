@@ -48,7 +48,7 @@ function topFunction() {
         <li><a href="register/logout.php">Kijelentkezés</a></li>
     </ul>
     <div>
-        <span style="margin-right: 15px; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: bolder; font-size: 15px" >Üdv, <a style="color: rgb(3, 85, 192);" href="edit-profile.php"><?= $_SESSION['username'] ?></a></span>
+        <span style="margin-right: 15px; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: bolder; font-size: 15px" >Üdv, <a style="color: #0355C0;" href="edit-profile.php"><?= $_SESSION['username'] ?></a></span>
         <a href="index.php" class="logo"><i style='font-size:24px' class='fas'>&#xf1b0;</i>Petadopt</a>
     </div>
 </nav>
@@ -87,7 +87,7 @@ nav ul {
 nav a {
     font-weight: bolder;
     font-size: 15px;
-    color: black;
+    color: #000;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 280ms ease-in-out;

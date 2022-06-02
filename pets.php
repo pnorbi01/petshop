@@ -13,7 +13,7 @@ $row = $result->fetch_assoc();
 <div class="card">
     <div class="card-container">
         <?php
-		$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age from pets, species where pets.specieId = ".$specieId." and species.id = pets.specieId";
+		$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age, pets.action from pets, species where pets.specieId = ".$specieId." and species.id = pets.specieId";
 		$result = $conn->query($sql);
         $index = 0;
 		if($result->num_rows > 0) {
@@ -24,8 +24,20 @@ $row = $result->fetch_assoc();
             <span style="font-size: 23px"><b><?= $row["name"] ?></b></span>
             <span class="pet-specie"><?= $row["specie"] ?></span>
             <span class="pet-description"><?= $row["description"] ?></span>
+            <?php
+            if($row["action"] == 1) {
+            ?>
             <button type="button" onclick="openModal(<?= $row['id'] ?>)" class="infoButton">Részletek</button>
             <button onclick="toggleHeart(event)"><i class="fas fa-heart" style="font-size: 20px"></i></button>
+            <?php
+            }
+            else {
+                ?>
+                <button type="button" class="infoButtonDis" disabled>Részletek</button>
+                <span class="adopted">ÖRÖKBEFOGADVA!</span>
+            <?php  
+            }
+            ?>
         </div>
         
 
@@ -58,8 +70,11 @@ $row = $result->fetch_assoc();
             }
         }
     ?>
+    
     </div>
 </div>
+
+
 <?php
 require_once('assets/php/footer.php');
 ?>

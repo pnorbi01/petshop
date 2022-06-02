@@ -1,8 +1,17 @@
 <?php
 session_start();
+require_once('config/db.php');
 require_once('assets/php/header.php');
 require_once('assets/php/nav.php');
 ?>
+
+<?php
+$sql = "SELECT * FROM users_web WHERE username = '".$_SESSION["username"]."'";
+//majd AI legyen id users_webbe
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+?>
+
 <div class="edit-profile-title">
     <h1>Profil adatainak szerkesztése</h1>
 </div>
@@ -12,30 +21,58 @@ require_once('assets/php/nav.php');
         <div id="edit-form">
             <div class="edit-main">
                 <i class="fa">&#xf044;</i>
-                <form method="post" id="editProfile" action="#">
+                <form method="post" id="editProfile" action="data-action.php">
                     <div style="display: flex; gap: 1em;">
                         <div style="width: 50%">
                             <label for="userName">FELHASZNÁLÓNÉV</label>
-                            <input type="text" id="userName" name="username" disabled placeholder="<?= $_SESSION['username'] ?>">
+                            <input type="text" id="userName" name="editUserName" disabled value="<?= $row['username'] ?>">
 
                             <label for="fName">KERESZTNÉV</label>
-                            <input type="text" id="fName" name="firstname" required placeholder="Keresztnév..">
-
-                            <label for="lName">VEZETÉKNÉV</label>
-                            <input type="text" id="lName" name="lastname" required placeholder="Vezetéknév..">
+                            <input type="text" id="fName" name="editFirstName" required value="<?= $row["firstname"] ?>">
                         </div>
                         <div style="width: 50%">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" class="mainInput" required placeholder="example@gmail.com">
+                            <input type="email" id="email" name="editEmail" class="mainInput" required value="<?= $row["email"] ?>">
 
-                            <label for="firstPassword">JELSZÓ</label>
-                            <input type="password" id="firstPassword" name="password" required placeholder="Jelszó..">
-
-                            <label for="secondPassword">JELSZÓ ISMÉT</label>
-                            <input type="password" id="secondPassword" name="passwordConfirm" required placeholder="Jelszó ismét..">
+                            <label for="lName">VEZETÉKNÉV</label>
+                            <input type="text" id="lName" name="editLastName" required value="<?= $row["lastname"] ?>">
                         </div>
                     </div>
-                    <input type="submit" value="Adatok mentése">
+                    <input type="submit" value="Adatok mentése" name="modify">
+                    <?php
+                        if(isset($_SESSION["data-msg"]) && $_SESSION["data-msg"] == "succ"){
+                            echo '<div class="alertData"><span>Sikeresen megváltoztatta adatait!</span></div>';
+                            unset($_SESSION["data-msg"]);
+                        }
+                        else if(isset($_SESSION["data-msg"]) && $_SESSION["data-msg"] == "err") {
+                            echo '<div class="alertDataErr"><span>Valami hiba történt. Próbálja újra!</span></div>';
+                            unset($_SESSION["data-msg"]);
+                        }
+                    ?>
+                </form>
+                <form method="post" id="editPassword" action="password-action.php">
+                <i class="fa">&#xf023;</i>
+                    <div style="display: flex; gap: 1em;">
+                        <div style="width: 50%">
+                            <label for="firstPassword">JELSZÓ</label>
+                            <input type="password" id="firstPassword" name="newPassword" required placeholder="Jelszó..">
+                        </div>
+                        <div style="width: 50%">
+                            <label for="secondPassword">JELSZÓ ISMÉT</label>
+                            <input type="password" id="secondPassword" name="newPasswordConfirm" required placeholder="Jelszó ismét..">
+                        </div>
+                    </div>
+                    <input type="submit" value="Jelszó megváltoztatása" name="modifyPass">
+                    <?php
+                        if(isset($_SESSION["pass-msg"]) && $_SESSION["pass-msg"] == "succ"){
+                            echo '<div class="alertData"><span>Sikeresen megváltoztatta jelszavát!</span></div>';
+                            unset($_SESSION["pass-msg"]);
+                        }
+                        else if(isset($_SESSION["pass-msg"]) && $_SESSION["pass-msg"] == "err") {
+                            echo '<div class="alertDataErr"><span>Nem egyezik a jelszava!</span></div>';
+                            unset($_SESSION["pass-msg"]);
+                        }
+                    ?>
                 </form>
             </div>
         </div>

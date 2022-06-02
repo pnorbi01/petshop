@@ -59,7 +59,7 @@ body {
 }
 
 #container button:hover {
-    color: white;
+    color: #fff;
     border: 1px solid #000;
     border-radius: 5px;
     background-color: #000;
@@ -117,19 +117,19 @@ body {
 
 .news-content button {
     margin-top: 25px;
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #fff;
     padding: 10px 80px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #000;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     transition: background-color 1s ease-out 100ms
 }
 
 .news-content button:hover {
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
@@ -171,11 +171,11 @@ body {
 }
 
 .pet-content button {
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #fff;
     padding: 10px 80px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid #fff;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     transition: background-color 1s ease-out 100ms;
@@ -183,9 +183,9 @@ body {
 }
 
 .pet-content button:hover {
-    border: 1px solid black;
-    color: white;
-    background-color: black;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
@@ -219,7 +219,7 @@ body {
 }
 
 .about-content {
-    color: black;
+    color: #000;
     padding: 0 5em;
     display: flex;
     flex-direction: column;
@@ -233,20 +233,20 @@ body {
 }
 
 .about-content button {
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #fff;
     padding: 10px 80px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #000;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     transition: background-color 1s ease-out 100ms
 }
 
 .about-content button:hover {
-    color: white;
-    border: 1px solid black;
-    background-color: black;
+    color: #fff;
+    border: 1px solid #000;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
@@ -291,135 +291,23 @@ body {
 }
 
 #contact-main button {
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #fff;
     padding: 10px 80px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid #fff;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     transition: background-color 1s ease-out 100ms
 }
 
 #contact-main button:hover {
-    border: 1px solid black;
-    color: white;
-    background-color: black;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
-
-
-    /* News page */
-
-#news {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../img/news.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#newsletter-form {
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#newsletter-form a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.newsletter {
-    width: 20%;
-    padding: 15px;
-    background-color: #ccc;
-    border-radius: 20px;
-}
-
-#newsletter-form input[type=submit] {
-    text-transform: uppercase;
-    width: 100%;
-    color: black;
-    background-color: white;
-    padding: 10px 80px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
-    transition: background-color 1s ease-out 100ms
-}
-
-#newsletter-form input[type=submit]:hover {
-    color: white;
-    background-color: black;
-    cursor: pointer;
-    transition: background-color 1s ease-out 100ms
-}
-
-#newsletter-form input[type=email] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-#newsletter-form input[type=text] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-#newsletter-form input[type=password] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-#newsletter-form input {
-    font-family:inherit;
-}
-
-#newsletter-form i {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 3em;
-    color: white;
-}
-
-#newsletter-form p {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-#newsletter-form label {
-    font-weight: bold;
-}
-
 
     /* Animals page */
 
@@ -478,7 +366,7 @@ body {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: 250ms;
-    color: white;
+    color: #fff;
     z-index: 1;
 }
 
@@ -513,7 +401,7 @@ body {
     width: 100%;
     height: 89%;
     background: rgba(0,0,0,0.6);
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -552,7 +440,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.6);
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -671,8 +559,8 @@ body {
 #contact-form input[type=submit] {
     text-transform: uppercase;
     width: 100%;
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #fff;
     padding: 10px 80px;
     border: 1px solid #ccc;
     font-weight: bold;
@@ -681,8 +569,8 @@ body {
 }
 
 #contact-form input[type=submit]:hover {
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
@@ -717,7 +605,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    border: 1px solid lightgray;
+    border: 1px solid #f1f1f1;
     width: 20%;
     height: 50vh;
     padding: 10px;
@@ -752,8 +640,8 @@ body {
 }
 
 .card-content .infoButton {
-    color: black;
-    border: 1px solid lightgray;
+    color: #000;
+    border: 1px solid #000;
     background-color: #f1f1f1;
     margin-top: 25px;
     transition: background-color 0.5s ease-out 100ms;
@@ -766,13 +654,26 @@ body {
 
 
 .card-content .infoButton:hover {
-    color: white;
-    border: 1px solid lightgray;
+    color: #fff;
+    border: 1px solid #f1f1f1;
     border-radius: 5px;
-    background-color: gray;
+    background-color: #808080;
     cursor: pointer;
     transition: background-color 0.5s ease-out 100ms;
     border-radius: 10px;
+}
+
+.card-content .infoButtonDis {
+    opacity: 0.3;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #f1f1f1;
+    margin-top: 25px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 .card-content button {
@@ -783,6 +684,12 @@ body {
 .card-content button:hover {
     cursor: pointer;
 }
+
+.adopted {
+    font-weight: bolder;
+}
+
+
 
     /* Design of searcher */
 
@@ -816,7 +723,7 @@ body {
     background-color: #000;
     cursor: pointer;
     border: 1px solid #000;
-    color: white;
+    color: #fff;
     transition: background-color 0.5s ease-out 100ms;
 }
 
@@ -839,6 +746,7 @@ body {
     /* Design of pop-up window */
 
 .bg-modal {
+    z-index: 1;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -854,7 +762,7 @@ body {
 .modal-content {
     width: 60%;
     height: 60%;
-    background-color: white;
+    background-color: #fff;
     border-radius: 4px;
     text-align: center;
     padding: 20px;
@@ -875,7 +783,7 @@ body {
 }
 
 .close1:hover {
-    color: red;
+    color: #FF0000;
 }
 
 .leftSide {
@@ -909,6 +817,7 @@ body {
 }
 
 .modalTitle {
+    color:#0355C0;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -923,9 +832,9 @@ body {
 }
 
 .modalButton .adoptButton {
-    color: black;
-    border: 1px solid lightgray;
-    background: white;
+    color: #000;
+    border: 1px solid #f1f1f1;
+    background: #fff;
     margin-top: 25px;
     transition: background-color 0.5s ease-out 100ms;
     padding: 8px;
@@ -935,10 +844,10 @@ body {
 }
 
 .modalButton .adoptButton:hover {
-    color: white;
-    border: 1px solid lightgray;
+    color: #fff;
+    border: 1px solid #f1f1f1;
     border-radius: 5px;
-    background-color: gray;
+    background-color: #808080;
     cursor: pointer;
     transition: background-color 0.5s ease-out 100ms;
     border-radius: 10px;
@@ -1008,8 +917,8 @@ body {
     #sign-in-form input[type=submit] {
         text-transform: uppercase;
         width: 100%;
-        color: black;
-        background-color: white;
+        color: #000;
+        background-color: #fff;
         padding: 10px 80px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -1019,8 +928,8 @@ body {
     }
     
     #sign-in-form input[type=submit]:hover {
-        color: white;
-        background-color: black;
+        color: #fff;
+        background-color: #000;
         cursor: pointer;
         transition: background-color 1s ease-out 100ms
     }
@@ -1067,7 +976,7 @@ body {
         align-items: center;
         margin-bottom: 20px;
         font-size: 3em;
-        color: rgb(3, 85, 192);
+        color: #0355C0;
     }
     
     #sign-in-form p {
@@ -1097,8 +1006,8 @@ body {
     #forget input[type=submit] {
         text-transform: uppercase;
         width: 100%;
-        color: black;
-        background-color: white;
+        color: #000;
+        background-color: #FFF;
         padding: 10px 80px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -1137,8 +1046,8 @@ body {
     #sign-up-form input[type=submit] {
         text-transform: uppercase;
         width: 100%;
-        color: black;
-        background-color: white;
+        color: #000;
+        background-color: #FFF;
         padding: 10px 80px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -1148,8 +1057,8 @@ body {
     }
     
     #sign-up-form input[type=submit]:hover {
-        color: white;
-        background-color: black;
+        color: #FFF;
+        background-color: #000;
         cursor: pointer;
         transition: background-color 1s ease-out 100ms
     }
@@ -1196,7 +1105,7 @@ body {
         align-items: center;
         margin-bottom: 20px;
         font-size: 3em;
-        color: rgb(3, 85, 192);
+        color: #0355C0;
     }
     
     #sign-up-form p {
@@ -1216,7 +1125,7 @@ body {
         margin-top: 15px;
         padding: 10px 20px;
         background-color: rgb(189, 189, 38);
-        color: white;
+        color: #FFF;
     }
 
     .closeAlert {
@@ -1234,6 +1143,57 @@ body {
         color: #000;
     }
 
+    .alertContact {
+        width: 580px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-top: 15px;
+        padding: 10px 10px;
+        background-color: #37C70C;
+        color: #FFF;
+    }
+
+    .alertContactErr {
+        width: 580px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-top: 15px;
+        padding: 10px 10px;
+        background-color: #CF2608;
+        color: #FFF;
+    }
+
+    .alertData {
+        width: 97.5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-top: 15px;
+        padding: 10px 10px;
+        background-color: #37C70C;
+        color: #FFF;
+    }
+
+    .alertDataErr {
+        width: 97.5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-top: 15px;
+        padding: 10px 10px;
+        background-color: #CF2608;
+        color: #FFF;
+    }
     /* Adopting page /form/ */
 
 #adopt {
@@ -1267,8 +1227,8 @@ body {
 #adopt input[type=submit] {
     text-transform: uppercase;
     width: 100%;
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #FFF;
     padding: 10px 80px;
     border: 1px solid #ccc;
     font-weight: bold;
@@ -1277,8 +1237,8 @@ body {
 }
 
 #adopt input[type=submit]:hover {
-    color: white;
-    background-color: black;
+    color: #FFF;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
@@ -1317,7 +1277,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: rgb(3, 85, 192);
+    color: #0355C0;
 }
 
 #edit-profile-container {
@@ -1357,8 +1317,8 @@ body {
 #edit-form input[type=submit] {
     text-transform: uppercase;
     width: 100%;
-    color: black;
-    background-color: white;
+    color: #000;
+    background-color: #FFF;
     padding: 10px 80px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -1368,8 +1328,8 @@ body {
 }
 
 #edit-form input[type=submit]:hover {
-    color: white;
-    background-color: black;
+    color: #FFF;
+    background-color: #000;
     cursor: pointer;
     transition: background-color 1s ease-out 100ms
 }
@@ -1416,7 +1376,7 @@ body {
     align-items: center;
     margin-bottom: 20px;
     font-size: 3em;
-    color: rgb(3, 85, 192);
+    color: #0355C0;
 }
 
 #edit-form p {
@@ -1429,6 +1389,81 @@ body {
 #edit-form label {
     font-weight: bold;
 }
+
+#editPassword {
+    margin-top: 150px;
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 1200px) {
+    body{
+        width: 100%;
+    }
+    #log-container{
+        height: 50vh;
+        display: block;
+    }
+    #sign-up{
+        margin-top: 10px;
+        width: 100%;
+    }
+    #sign-in{
+        margin-top: 10px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 590px) {
+
+    .sign-in-main{
+        width: 80%;
+    }
+
+    .sign-up-main{
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .content{
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .content{
+        width: 50%;
+        padding-left: 0px;
+        padding-right: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -7,7 +7,7 @@ require_once('config/db.php');
 $petId = $_GET["petId"];
 $animalId = $_GET["animalId"];
 
-$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age FROM pets, species WHERE species.id = pets.specieId and pets.id = ".$petId; 
+$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age, pets.action FROM pets, species WHERE species.id = pets.specieId and pets.id = ".$petId; 
 $result = $conn->query($sql);
 $petResult = $result->fetch_assoc();
 
@@ -28,7 +28,47 @@ $animalResult = $result->fetch_assoc();
         <input type="email" id="email" name="email" required placeholder="example@gmail.com">
         <label for="address">Lakcím*</label>
         <input type="text" id="address" name="address" required placeholder="Adja meg lakcímét">
-        <input type="submit" value="Örökbefogadom">
+        <input type="submit" value="Örökbefogadom" name="adopt">
+
+        <?php
+            if(isset($_POST["adopt"])) {
+                if(isset($_POST["lname"]) && !empty($_POST["lname"]) && 
+                    isset($_POST["fname"]) && !empty($_POST["fname"]) &&
+                    isset($_POST["email"]) && !empty($_POST["email"]) &&
+                    isset($_POST["address"]) && !empty($_POST["address"]) &&
+                    $petResult["action"] != 0) {
+
+            $firstname = $_POST["fname"];
+            $lastname = $_POST["lname"];
+            $email = $_POST["email"];
+            $address = $_POST["address"];
+            $user = $_SESSION["username"];
+            $specie = $petResult["specie"];
+            $name = $petResult["name"];
+
+            $sql1 = "INSERT INTO adopts (user, pet_name, pet_specie, lastname, firstname, email, address) values ('$user', '$name', '$specie', '$lastname', '$firstname', '$email', '$address')";
+
+            if ($conn->query($sql1) === TRUE) {
+                echo '<div class="alertContact"><span>Sikeresen örökbefogadta ' .$name. '-t</span></div>';
+                $sql2 = "UPDATE pets SET action = 0 where pets.id = '$petId'";
+                if($conn->query($sql2)){
+                    echo "<meta http-equiv='refresh' content='2'>";
+                }
+            } 
+            
+              else {
+                echo "Error: " . $sql1 . "<br>" . $conn->error;
+              }
+              
+              $conn->close();
+        }
+        else {
+            echo '<div class="alertContactErr"><span>Az alábbi kiskedvenc már örökbe lett fogadva!</span></div>';
+            echo "<meta http-equiv='refresh' content='2'>";
+          }
+    }
+?>
+
     </form>
 </div>
 </body>
