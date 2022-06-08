@@ -1,6 +1,7 @@
 <?php 
 require_once('assets/php/header.php');
 require_once('register/config.php');
+require_once('assets/php/nav.php');
 ?>
 <div id="log-container">
     <div id="sign-up">

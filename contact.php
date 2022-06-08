@@ -16,7 +16,7 @@ $restaurants = $conn->query($sql);
     </div>
 </div>
 <div id="contact-form">
-    <form method="post" id="contactId" action="contact-action.php">
+    <form method="post" id="contactId" action="action/contact-action.php">
         <label for="fname">Keresztneve</label>
         <input type="text" id="fname" name="firstname" required placeholder="Keresztneve..">
 

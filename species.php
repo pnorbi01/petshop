@@ -1,8 +1,9 @@
 <?php 
 session_start();
 require_once('assets/php/header.php');
-require_once('assets/php/nav.php');
 require_once('config/db.php');
+require_once('assets/php/nav.php');
+
 $animalId = $_GET["animalId"];
 ?>
 <div class="animal">

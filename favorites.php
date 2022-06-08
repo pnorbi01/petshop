@@ -1,29 +1,17 @@
 <?php 
 session_start();
 require_once('assets/php/header.php');
-require_once('config/db.php');
 require_once('assets/php/nav.php');
-
-$animalId = $_GET["animalId"];
-$specieId = $_GET["specieId"];
-$sql = "SELECT * FROM species where id = ".$specieId;
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-
-if($loggedin) {
-    $favoritesResult = $conn->query("SELECT pet_id FROM favourites WHERE user_id = ".$_SESSION["id_user"]);
-    $ids_array = [];
-    while($row = $favoritesResult->fetch_assoc())
-    {
-        $ids_array[] = $row['pet_id'];
-    }
+require_once('config/db.php');
+if (!isset($_SESSION['username']) OR !isset($_SESSION['id_user']) OR !is_int($_SESSION['id_user'])) {
+    header("Location: index.php");
 }
 ?>
 
 <div class="card">
     <div class="card-container">
         <?php
-		$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age, pets.adopted, pets.active from pets, species where pets.specieId = ".$specieId." and species.id = pets.specieId and active = 1";
+		$sql = "SELECT pets.id, species.name as specie, pets.description, pets.image, pets.name, pets.gender, pets.age, pets.adopted, pets.active from pets, species, favourites where favourites.user_id = ".$_SESSION["id_user"]." AND favourites.pet_id = pets.id AND pets.specieId = species.id";
 		$result = $conn->query($sql);
 		if($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {
@@ -37,24 +25,13 @@ if($loggedin) {
                     if($row["adopted"] == 1) {
                     ?>
             <button type="button" onclick="openModal(<?= $row['id'] ?>)" class="infoButton">Részletek</button>
-                <?php 
-                    if($loggedin && in_array($row["id"], $ids_array)) {
-                ?>
                 <form method="post" action="action/unfav-action.php">
                     <input type="text" hidden value="<?= $row["id"] ?>" name="favourite">
                     <input type="text" hidden value="<?= $_SERVER["REQUEST_URI"] ?>" name="url">
                     <button name="fav"><i class="fas fa-heart"
                         style="font-size: 20px; color: #0355C0;"></i></button>
                         </form>
-                        <?php } else if ($loggedin) { ?>
-                            <form method="post" action="action/fav-action.php">
-                    <input type="text" hidden value="<?= $row["id"] ?>" name="favourite">
-                    <input type="text" hidden value="<?= $_SERVER["REQUEST_URI"] ?>" name="url">
-                    <button name="fav"><i class="fas fa-heart"
-                        style="font-size: 20px; color: red;"></i></button>
-                        </form>
-                        <?php }
-                    
+                    <?php
                     }
                     else {
                         ?>
@@ -82,17 +59,6 @@ if($loggedin) {
                     <span><?= $row["age"] ?></span>
                     <span class="modalTitle">Leírás</span>
                     <span><?= $row["description"] ?></span>
-                    <div class="modalButton">
-                        <?php 
-                        if($loggedin) { ?>
-                            <a href="adopt.php?animalId=<?= $animalId ?>&petId=<?= $row["id"] ?>"><button type="submit"
-                                    value="Submit" class="adoptButton">Örökbefogadás</button></a>
-                        <?php } else { ?>
-                            <a href="login.php"><button type="submit"
-                                    value="Submit" class="adoptButton">Örökbefogadás</button></a>
-                                    <?php
-                        } ?>
-                    </div>
                 </div>
                 <div class="close1" onclick="closeModal(event)">+</div>
             </div>
@@ -100,9 +66,9 @@ if($loggedin) {
         <script src="assets/js/main.js"></script>
         <?php
                 }
-            /*else { 
-                echo "<div class='no-result'><h1>Nincs találat!</h1></div>";
-            }*/
+            }
+            else { 
+                echo "<div class='no-result'><h1>Jelenleg nincs állat kedvencei között!</h1></div>";
             }
     ?>
 
