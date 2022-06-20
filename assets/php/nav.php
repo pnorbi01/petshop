@@ -39,16 +39,6 @@ function topFunction() {
     <img src="assets/img/downloading.gif">
 </div>
 
-<?php
-require_once('config/db.php');
-?>
-
-<?php
-$sql = "SELECT * FROM users_web WHERE username = '".$_SESSION["username"]."'";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-?>
-
 <nav>
     <ul>
     <li><a href="index.php">Kezdőlap</a></li>
@@ -56,34 +46,11 @@ $row = $result->fetch_assoc();
         <li><a href="animals.php">Állataink</a></li>
         <li><a href="favorites.php">Kedvencek</a></li>
         <li><a href="about.php">Rólunk</a></li>
-        <?php
-        if($row["level"] == 2) {
-        ?>
-        <li><a href="ad-posting.php">Hírdetés feladás</a></li>
-        <li><a href="admin-console.php">Adminpult</a></li>
-        <?php
-        }
-        else if($row["level"] <= 1){ ?>
-        <li><a href="ad-posting.php">Hírdetés feladás</a></li>
-        <?php
-        }
-        ?>
         <li><a href="register/logout.php">Kijelentkezés</a></li>
     </ul>
     <div>
-        <?php
-        if($row["level"] == 2) {
-        ?>
-        <span style="margin-right: 15px; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: bolder; font-size: 15px" >Üdv, <a style="color: #0355C0;" href="edit-profile.php"><?= $_SESSION['username'] ?></a><i class="material-icons" title="Admin" style="font-size: 17px">&#xe8e8;</i></span>
+        <span style="margin-right: 15px; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: bolder; font-size: 15px" >Üdv, <a style="color: #0355C0;" href="edit-profile.php"><?=['username'] ?></a><i class="material-icons" title="Admin" style="font-size: 17px">&#xe8e8;</i></span>
         <a href="index.php" class="logo"><i style='font-size:24px' class='fas'>&#xf1b0;</i>Petadopt</a>
-        <?php
-        }
-        else { ?>
-        <span style="margin-right: 15px; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: bolder; font-size: 15px" >Üdv, <a style="color: #0355C0;" href="edit-profile.php"><?= $_SESSION['username'] ?></a></span>
-        <a href="index.php" class="logo"><i style='font-size:24px' class='fas'>&#xf1b0;</i>Petadopt</a>
-        <?php 
-        }
-        ?>
     </div>
 </nav>
 
